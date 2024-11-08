@@ -1,0 +1,21 @@
+Component Specification Draft
+
+1.	Software components. High level description of the software components such as: *data manager*, which provides a simplified interface to your data and provides application specific features (e.g., querying data subsets); and *visualization manager*, which displays data frames as a plot. Describe at least 3 components specifying: what it does, inputs it requires, and outputs it provides.
+  a.	Tellurium: a python based modeling environment for systems and synthetic biology
+    i.	This package will require no inputs because the kinetic equations are unchanging in this package. Since the user will always be looking at kinetics of tacrolimus, it will also produce no outputs. 
+  b.	Numpy: a python based package for scientific computing 
+    i.	This package will require no inputs, however it will be used to compute equations which will output specific numbers for the users.
+  c.	Pandas dataframe: this will store and organize the computed variables 
+    i.	Columns: antibody concentration, antigen concentration, wash buffer volume, substrate concentration, sample volume, standard width, standard height, standard depth, new width, new height, new depth
+    ii.	Index: time in seconds
+    iii.	Units of values: ng/mL, ng/mL, µL, ng/mL, µL, µm, µm, µm, µm, µm, µm
+2.	Interactions to accomplish use cases. Describe how the above software components interact to accomplish at least one of your use cases.
+  a.	When the user inputs the specified dimensional variables they will be inputted into the pandas dataframe. The new dimensional variables will also be inputted into a kinetic model to specify the new constraints. The kinetic model will be described with numpy and it will be used to compute the new concentrations of assay components which then will be organized back into the pandas dataframe.
+3.	Preliminary plan. A list of tasks in priority order.
+  a.	Find kinetic model to describe tacrolimus assay
+  b.	Recreate kinetic model in python using numpy functions
+  c.	Create a pandas dataframe to iterate through and store all the variables
+  d.	Describe and input the kinetic model in tellurium
+
+  
+  
