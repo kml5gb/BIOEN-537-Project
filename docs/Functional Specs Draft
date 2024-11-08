@@ -1,0 +1,24 @@
+Functional Specification Draft
+1.	Background. The problem being addressed.
+  1.	There are assays that are currently developed to detect and measure tacrolimus, an immunosuppressant drug. Microfluidics can add additional degrees of flexibility to an assay because it can provide automation and miniaturization of the assay which enables greater usability and faster kinetics due to the restricted areas for reaction. However, further optimization of the assay components is often needed to translate assays from the millifluidic regime to the microfluidic regime – which is often cumbersome and time-consuming. This project will create a python package which intakes a specified microfluidic channel’s width, height, and length and translates the components of the tacrolimus immunoassay to this specified regime.
+
+2.	User profile. Who uses the system? What do they know about the domain and computing (e.g., can browse the web, can program in Python). What skills do they have and what access do they have? Does it interact with a proprietary database?
+  1.	This system will be mainly used by researchers within my lab, however, I can also take into account the usability of the package to ensure that the package can be used by other microfluidic researchers studying tacrolimus. Most people in my lab are proficient with python and python IDES, therefore, this can be a package that is designed to be used with python.
+
+3.	Use cases (step by step with details for both the user and the system). Describe at least two use cases. For each, describe: (a) the objective of the user interaction (e.g., withdraw money from an ATM); and (b) the expected interactions between the user and your system.
+  1.	A researcher in my lab wants to use this program to translate the tacrolimus assay to their 3D printed microfluidic device. Given that the device is 3D printed, we have the opportunity to vary the dimensional parameters of our device in addition to the assay parameters to create a high-fidelity device. They will use this package to vary different aspects of the dimensional values until they reach a reagent volume that they are happy with. They decide to start with a channel that has a 500 µm width, a 500 µm height, and a 30 mm length. 
+    i.	They open their python IDE and install the tacromicroassay package with pip install tacromicroassay
+    ii.	They import in the tacromicroassay package at the top of their code. 
+    iii.	The package requests that they input their specified width, height, and length of the channel. 
+    iv.	They run the package. 
+    v.	The output is the concentrations of the components of the tacrolimus assay in float format. 
+    vi.	They repeat steps 3-5 multiple times, varying the width, height, and length of the channel to see what volume of reagents that they can use.
+  2.	Another researcher in my lab wants to use this program to translate the tacrolimus assay to their 3D printed microfluidic device. This device has a strict dimensional limitation: the channel must be 150 µm width, a 200 µm height, and a 20 mm length to fit within the footprint of their device. 
+    i.	They open their python IDE and install the tacromicroassay package with pip install tacromicroassay
+    ii.	They import in the tacromicroassay package at the top of their code. 
+    iii.	The package requests that they input their specified width, height, and length of the channel. 
+    iv.	They run the package. 
+    v.	The output is the concentrations of the components of the tacrolimus assay in float format. 
+    vi.	They will use these concentrations as a starting point for optimizing this assay on the bench.
+  
+  
